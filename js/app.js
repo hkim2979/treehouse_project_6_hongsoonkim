@@ -2,7 +2,7 @@
 
 const qwerty = document.getElementById("qwerty");
 const phrase = document.getElementById("phrase");
-const startButton = document.querySelector(".btn__reset");
+const startGame = document.querySelector(".btn__reset");
 const overlay = document.getElementById("overlay");
 
 const phraseUl = phrase.firstElementChild;
@@ -13,7 +13,7 @@ let missed = 0;
 
 // event listener for btn_reset element
 
-startButton.addEventListener("click", () => {
+startGame.addEventListener("click", () => {
   overlay.style.display = "none"
 });
 
@@ -104,7 +104,7 @@ function checkWin() {
 //game reset function
 
 function reset() {
-  startButton.textContent = "do it again"
+  startGame.textContent = "do it again"
   missed = 0
   phraseUl.textContent = ""
   const chosenLetters = document.querySelectorAll(".chosen")
